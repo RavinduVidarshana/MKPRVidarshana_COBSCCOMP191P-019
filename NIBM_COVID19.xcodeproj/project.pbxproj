@@ -18,6 +18,7 @@
 		ACA11937250F955B003E7F1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA11935250F955B003E7F1B /* LaunchScreen.storyboard */; };
 		ACA11942250F955C003E7F1B /* NIBM_COVID19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA11941250F955C003E7F1B /* NIBM_COVID19Tests.swift */; };
 		ACA1194D250F955C003E7F1B /* NIBM_COVID19UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1194C250F955C003E7F1B /* NIBM_COVID19UITests.swift */; };
+		CC3A885925147CA20014C862 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3A885825147CA20014C862 /* StatusViewController.swift */; };
 		CCB33F5F25137A73002C3ACF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB33F5E25137A73002C3ACF /* GoogleService-Info.plist */; };
 		CCB33F6925138616002C3ACF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB33F6825138616002C3ACF /* LoginViewController.swift */; };
 		CCB33F6C2513864E002C3ACF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB33F6B2513864E002C3ACF /* SignupViewController.swift */; };
@@ -64,6 +65,7 @@
 		ACA11948250F955C003E7F1B /* NIBM_COVID19UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBM_COVID19UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA1194C250F955C003E7F1B /* NIBM_COVID19UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_COVID19UITests.swift; sourceTree = "<group>"; };
 		ACA1194E250F955C003E7F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3A885825147CA20014C862 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		CCB33F5E25137A73002C3ACF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CCB33F6825138616002C3ACF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CCB33F6B2513864E002C3ACF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				CCB33F6B2513864E002C3ACF /* SignupViewController.swift */,
 				CCB33F6D25139402002C3ACF /* SurvayViewController.swift */,
 				CCB33F6F2513AF21002C3ACF /* MyMenuViewController.swift */,
+				CC3A885825147CA20014C862 /* StatusViewController.swift */,
 			);
 			path = NIBM_COVID19;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3A885925147CA20014C862 /* StatusViewController.swift in Sources */,
 				CCB33F6925138616002C3ACF /* LoginViewController.swift in Sources */,
 				CCB33F702513AF21002C3ACF /* MyMenuViewController.swift in Sources */,
 				ACA1192C250F955B003E7F1B /* ViewController.swift in Sources */,

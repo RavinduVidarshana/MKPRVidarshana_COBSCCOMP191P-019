@@ -22,6 +22,8 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
+    var ref: DatabaseReference!
+    
     @IBAction func btnSignUp(_ sender: Any) {
         
         if let email = email.text, let password = password.text {
@@ -32,11 +34,21 @@ class SignupViewController: UIViewController {
                     print(e)
                 }
                 else{
-                    self.performSegue(withIdentifier: "SignupSegway", sender: self)
+                   // self.performSegue(withIdentifier: "SignupSegway", sender: self)
                     print("Success")
                 }// ...
             }
         }
+        
+       let fName = firstName.text
+       let lName = lastName.text
+       let emailID = email.text
+       let uRole = role.text
+
+        ref = Database.database().reference()
+        self.ref.child("users").childByAutoId().setValue(["username": fName,"lastname": lName,"email": emailID,"role": uRole])
+        
+        
     }
     
     override func viewDidLoad() {

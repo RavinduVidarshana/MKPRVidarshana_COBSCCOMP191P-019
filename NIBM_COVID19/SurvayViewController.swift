@@ -83,9 +83,9 @@ class SurvayViewController: UIViewController {
   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if let destin = segue.destination as?  MyMenuViewController{
-            if let uData = sender as? String{
-                //destin.selectedDatedData = uData
+        if let dest = segue.destination as? StatusViewController{
+            if let uData =  sender as? String{
+                dest.selectedDatedData = uData
             }
         }
     }
