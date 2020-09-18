@@ -11,6 +11,11 @@ import Firebase
 
 class SignupViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
     
     @IBOutlet weak var firstName: UITextField!
     
@@ -24,7 +29,7 @@ class SignupViewController: UIViewController {
     
     var ref: DatabaseReference!
     
-    @IBAction func btnSignUp(_ sender: Any) {
+    @IBAction func btnSignUp(_ sender: UIButton) {
         
         if let email = email.text, let password = password.text {
             
@@ -34,28 +39,34 @@ class SignupViewController: UIViewController {
                     print(e)
                 }
                 else{
-                   // self.performSegue(withIdentifier: "SignupSegway", sender: self)
+                    let userId = authResult?.user.uid
+                    let fName = self.firstName.text
+                    let lName = self.lastName.text
+                    let emailID = self.email.text
+                    let uRole = self.role.text
+                    
+                    self.ref = Database.database().reference()
+                    
+                    self.ref.child("users").child(userId ?? "").setValue(["username": fName,"lastname": lName,"email": emailID,"role": uRole])
+                    
+                    self.performSegue(withIdentifier: "SignupSegway", sender: self)
                     print("Success")
                 }// ...
             }
         }
         
-       let fName = firstName.text
-       let lName = lastName.text
-       let emailID = email.text
-       let uRole = role.text
-
-        ref = Database.database().reference()
-        self.ref.child("users").childByAutoId().setValue(["username": fName,"lastname": lName,"email": emailID,"role": uRole])
-        
+//       let fName = firstName.text
+//       let lName = lastName.text
+//       let emailID = email.text
+//       let uRole = role.text
+//
+//        ref = Database.database().reference()
+//        self.ref.child("users").childByAutoId().setValue(["username": fName,"lastname": lName,"email": emailID,"role": uRole])
+//
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+   
     
 
     /*
