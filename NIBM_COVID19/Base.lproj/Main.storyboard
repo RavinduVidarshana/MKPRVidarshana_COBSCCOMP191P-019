@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VX-tT-wq8">
-                                <rect key="frame" x="25" y="335" width="325" height="30"/>
+                                <rect key="frame" x="25" y="291" width="325" height="30"/>
                                 <color key="backgroundColor" red="0.46628485506683348" green="0.66263379512115206" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2DQ-75-VjG"/>
@@ -32,8 +32,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-Pg-Ftr">
-                                <rect key="frame" x="70" y="387" width="235" height="47.5"/>
+                                <rect key="frame" x="70" y="343" width="235" height="40"/>
                                 <color key="backgroundColor" red="0.49603612362435368" green="1" blue="0.88506648940271371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="z07-0S-8hp"/>
+                                </constraints>
                                 <state key="normal" title="Sign up with Email">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -42,13 +45,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powerd by NIBM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-xd-pKv">
-                                <rect key="frame" x="25" y="587.5" width="325" height="14.5"/>
+                                <rect key="frame" x="25" y="536" width="325" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Yca-DN-QF8">
-                                <rect key="frame" x="38" y="107" width="299" height="165"/>
+                                <rect key="frame" x="38" y="63" width="299" height="165"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="165" id="ltU-EI-cIs"/>
                                 </constraints>
@@ -725,6 +728,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnLogout:" destination="69X-6I-vkz" eventType="touchUpInside" id="xjK-61-xaT"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="fMH-xo-vdZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -975,10 +979,11 @@
         <image name="safeac2" width="1318" height="1688"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AW2-UD-pd4"/>
+        <segue reference="Hj0-cm-dGG"/>
         <segue reference="2Gq-8m-oD1"/>
         <segue reference="zJ5-v6-KVI"/>
         <segue reference="H00-td-dnb"/>
-        <segue reference="YfN-KJ-mhf"/>
+        <segue reference="mYR-6Z-fHC"/>
+        <segue reference="fMH-xo-vdZ"/>
     </inferredMetricsTieBreakers>
 </document>
