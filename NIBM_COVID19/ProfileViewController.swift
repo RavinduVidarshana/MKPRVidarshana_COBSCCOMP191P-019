@@ -27,8 +27,8 @@ class ProfileViewController: UIViewController {
         var ref: DatabaseReference!
         
         ref = Database.database().reference()
-        let UId = Auth.auth().currentUser?.uid
-        ref.child("users").child(UId!).observeSingleEvent(of: .value, with:{(snapshot) in
+        let userID = Auth.auth().currentUser?.uid
+        ref.child("users").child(userID!).observeSingleEvent(of: .value, with:{(snapshot) in
             
             if let user = snapshot.value as? [String : String] {
                 print(user)

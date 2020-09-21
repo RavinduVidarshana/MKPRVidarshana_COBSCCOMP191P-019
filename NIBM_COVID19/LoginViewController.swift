@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
+    @IBOutlet weak var alertview: UIImageView!
     
     @IBAction func btnSignIn(_ sender: Any) {
         if let email = email.text, let password = password.text {
@@ -34,6 +35,8 @@ class LoginViewController: UIViewController {
                 else {
                     self.performSegue(withIdentifier: "loginSegway", sender: self)
                     print("login success")
+                    
+                   
                     
                 }
             }
