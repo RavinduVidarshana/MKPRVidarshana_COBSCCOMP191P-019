@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var password: UITextField!
     
-    @IBOutlet weak var alertview: UIImageView!
     
     @IBAction func btnSignIn(_ sender: Any) {
         if let email = email.text, let password = password.text {
@@ -28,15 +27,31 @@ class LoginViewController: UIViewController {
                 authResult, error in
                 //guard let strongSelf = self else { return }
                 // ...
-                
+               
                 if let e = error {
                     print(e)
+                    // create the alert
+                    let alert = UIAlertController(title: "Login Fail", message: "Invalid username or password.", preferredStyle: UIAlertController.Style.alert)
+                    
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
                 }
                 else {
                     self.performSegue(withIdentifier: "loginSegway", sender: self)
                     print("login success")
                     
-                   
+                    // create the alert
+                    let alert = UIAlertController(title: "Login Success", message: "Please answer this question.", preferredStyle: UIAlertController.Style.alert)
+                    
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+                    
                     
                 }
             }

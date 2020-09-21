@@ -37,6 +37,7 @@ class SignupViewController: UIViewController {
                 
                 if let e = error {
                     print(e)
+                    
                 }
                 else{
                     let userId = authResult?.user.uid
@@ -51,6 +52,7 @@ class SignupViewController: UIViewController {
                     
                     self.performSegue(withIdentifier: "SignupSegway", sender: self)
                     print("Success")
+                 
                 }// ...
             }
         }
